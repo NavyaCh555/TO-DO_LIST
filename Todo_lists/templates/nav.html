@@ -1,0 +1,17 @@
+<section id="nav">
+    <div id="subnav">
+        <a href="{% url 'home' %}" class="home">HOME</a>
+        <a href="{% url 'alltodos' %}" class="home">TO DO LIST</a>
+        <a href="{% url 'read' %}" class="home">HISTORY</a>
+        <a href="" class="home">CONTACT</a>
+    </div>
+    <article id="nav-art">
+        {% if update == True %}
+            <form action="" method="POST" id="nav_search">
+                {% csrf_token %}
+                <input type="text" name="search" class="search1" placeholder="Search for tasks">
+                <button type="submit" id="search1-btn">Search</button>
+            </form>
+    </article>
+    {% endif %}
+</section>
